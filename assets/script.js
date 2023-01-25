@@ -21,12 +21,12 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
-// let textDescription = $(".description");
+
 let saveButton = $(".saveBtn");
 let container = $(".container-lg");
 let allTimeBlocks = container.children("div");
 
-saveButton.on("click", function (event) {
+saveButton.on("click", function () {
   let clickedSaveButton = $(this);
   let textDescription = clickedSaveButton.siblings(".description");
   let currentEl = clickedSaveButton.closest("div");
@@ -38,25 +38,24 @@ saveButton.on("click", function (event) {
     let divId = `#hour-` + 9;
     console.log(divId);
     localStorage.setItem(divId, textDescription.val());
-    renderMessage(divId,index);
+    
   } else {
     divId = `#hour-` + (9 + index);
     localStorage.setItem(divId, textDescription.val());
     console.log(divId);
-    renderMessage(divId,index);
+
   }
 });
 
-function renderMessage(value,number) {
-  let lastMessage = localStorage.getItem(value);
-  let element = document.getElementById(value);
-  if (lastMessage !== null && element) {
-    element.getElementsByClassName("description")[number].value = lastMessage;
-  }
+function renderMessage(){
+  for(let i =9; i < 18;i++){
+    let storedData = localStorage.getItem("#hour-"+i)
+    $("#hour-"+i).children("textarea").val(storedData)
+}
 }
 
 function init() {
-  renderMessage;
+  renderMessage();
 }
 
 init();
