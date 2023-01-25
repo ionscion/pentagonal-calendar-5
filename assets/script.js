@@ -27,6 +27,10 @@ let container = $(".container-lg");
 let allTimeBlocks = container.children("div");
 let currentDiv = $(allTimeBlocks).get(2);
 console.log(currentDiv);
+let today = dayjs();
+$("#currentDay").text(today.format("MMM D, YYYY"));
+let hour = dayjs().hour();
+console.log(`hour is ${hour}`); 
 
 saveButton.on("click", function () {
   let clickedSaveButton = $(this);
@@ -77,10 +81,3 @@ function init() {
 }
 
 init();
-
-//adds current day to header space
-let today = dayjs();
-$("#currentDay").text(today.format("MMM D, YYYY"));
-
-let hour = dayjs().hour();
-console.log(`hour is ${hour}`); // gets current hour
