@@ -32,68 +32,21 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
+## Notes
+This webpage was created primarily with jQuery. It consists of several functions to save the users input in each time block to local storage so the data persists. To enter time, the user can click into one of the time blocks on the left, enter their notes and then click the corresponding save button icon on the right!
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+Using DayJS, the current day and date is displayed at the top of the page.
 
-## Grading Requirements
+Additionally, using DayJS, there is a function which updates the colors of the time blocks. Time appearing in grey is in the past, current hour time block is red and future time blocks will be green. 
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
 
-This Challenge is graded based on the following criteria:
+## Screenshots of Final Product
+Here is a screenshot of the deployed application:
+![calendar final](./assets/calendar-final.png)
 
-### Technical Acceptance Criteria: 40%
+Here is a screenshot of the calendar in aciton along with explanations of past, present and future times:
+![calendar in action](./assets/calender-in-action.png)
 
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Link to deployed application
+Please find the link to the deployed application here: 
+https://ionscion.github.io/pentagonal-calendar-5/
